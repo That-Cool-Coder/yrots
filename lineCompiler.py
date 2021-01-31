@@ -57,6 +57,10 @@ def cmd_varSet(yrotsLine, words):
 
     return f'{varName} = {value};\n'
 
+def cmd_sleep(yrotsLine, words):
+    secondsToSleep = int(words[3])
+    msToSleep = secondsToSleep * 1000
+    return f'await sleep({msToSleep});\n'
 
 
 LINE_KEYWORDS = {
@@ -71,5 +75,7 @@ LINE_KEYWORDS = {
     'read' : cmd_functionCall,
 
     'is' : cmd_varSet,
-    'was' : cmd_varSet
+    'was' : cmd_varSet,
+
+    'slept' : cmd_sleep
 }

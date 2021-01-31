@@ -1,7 +1,4 @@
-# These are headers to include in the compiler js
 
-PRE_CODE_HEADER = \
-'''
 // Main function in case the main function is not overwritten
 function main() {}
 
@@ -13,10 +10,13 @@ function sleep(ms) {
 }   
 
 
-'''
 
-POST_CODE_FOOTER = \
-'''
+async function main() {
+console.log('Test 1');
+await sleep(1000);
+console.log('Test 2');
+}
+
+
 // Driver code
 main(...process.argv);
-'''

@@ -26,7 +26,7 @@ def compileFunction(yrotsFunction, isEntryPoint):
             return ''
 
     compiledFunctionHeader = \
-        f'function {functionName}({arguments}) {{\n'
+        f'async function {functionName}({arguments}) {{\n'
     
     compiledFunction = compiledFunctionHeader
     for yrotLine in yrotsLines:
