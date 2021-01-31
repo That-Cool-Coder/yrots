@@ -1,6 +1,9 @@
 class NoCodeSupplied(Exception):
     pass
 
+class NoImportPath(Exception):
+    pass
+
 class UnderscoreNotPermitted(Exception):
     pass
 

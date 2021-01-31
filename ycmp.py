@@ -11,7 +11,8 @@ IMPORT_FOLDER_FLAG = 'from the series'
 
 DEBUG_MODE_FLAG = 'debug'
 
-def compileYrots(inputFileName=None, outputFileName=None, yrotsCode=None, compileFlags=[], isEntryPoint=True):
+def compileYrots(inputFileName=None, outputFileName=None, yrotsCode=None,
+    compileFlags=[], isEntryPoint=True):
     # isEntryPoint defines whether this is the 'main' file that is being compiled.
     # if this is false, then this file is being compiled as an imported
     # don't specify isEntryPoint if you are calling this from another project
@@ -21,11 +22,11 @@ def compileYrots(inputFileName=None, outputFileName=None, yrotsCode=None, compil
 
     print('Compiling', inputFileName)
 
-    # if no input code was supplied, raise an error
+    # If no input code was supplied, raise an error
     if inputFileName is None and yrotsCode is None:
         raise NoCodeSupplied
 
-    # if an input file was specified, read it
+    # If an input file was specified, read it
     if inputFileName is not None:
         # let it crash if the file is not found
         inputFile = open(inputFileName, 'r', encoding='utf-8')
